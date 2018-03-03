@@ -7,14 +7,7 @@
   "scripts": {
     "start": "nodemon src/index.js --exec babel-node",
     "build": "babel src -d build",
-    "test": "jest",
-    "lint-eslint": "eslint *.js",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "lint-eslint"
-    ]
+    "test": "jest"
   },
   "jest": {
     "testEnvironment": "node"
@@ -35,9 +28,7 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "husky": "^0.14.3",
     "jest": "^21.2.1",
-    "lint-staged": "^4.3.0",
     "nodemon": "^1.12.1",
     "sequelize-cli": "^4.0.0",
     "supertest": "^3.0.0"
