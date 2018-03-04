@@ -4,9 +4,9 @@
 
 A clone version of [Sli.do](https://www.sli.do/) with below technical stack.
 
-Frontend: ReactJS/Redux/Material-UI/Parcel/Jest/Enzyme
-Backend: KoaJS/Sequelize/Sqlite/Jest/Supertest
-Development Environment: Babel/ESlint
+- Frontend: ReactJS/Redux/Material-UI/Parcel/Jest/Enzyme
+- Backend: KoaJS/Sequelize/Sqlite/Jest/Supertest
+- Development Environment: Babel/ESlint
 
 Database schema:
 
