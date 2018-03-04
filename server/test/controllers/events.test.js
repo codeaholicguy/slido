@@ -3,6 +3,14 @@ import request from 'supertest'
 import {app} from '../../src/index'
 import eventService from '../../src/services/event'
 
+const user = {id: 1}
+const event = {
+  code: 'code',
+  name: 'name',
+  startsAt: '05-03-2018',
+  endsAt: '08-03-2018'
+}
+
 jest.mock('../../src/services/event', () => {
   const stuff = {
     code: 'code',
@@ -32,14 +40,6 @@ jest.mock('../../src/middlewares', () => {
 })
 
 const server = app.server()
-
-const user = {id: 1}
-const event = {
-  code: 'code',
-  name: 'name',
-  startsAt: '05-03-2018',
-  endsAt: '08-03-2018'
-}
 
 afterEach(() => {
   server.close()
