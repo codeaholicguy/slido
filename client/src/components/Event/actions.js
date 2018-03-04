@@ -65,6 +65,7 @@ export function likeQuestion(id) {
         if (question.id === id) {
           return {
             ...question,
+            reacted: true,
             like: question.like + 1
           }
         }
@@ -101,6 +102,7 @@ export function dislikeQuestion(id) {
         if (question.id === id) {
           return {
             ...question,
+            reacted: true,
             dislike: question.dislike + 1
           }
         }

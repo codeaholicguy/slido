@@ -21,15 +21,23 @@ export default class Question extends PureComponent {
   }
 
   render() {
-    const {question: {content, createdAt, like, dislike}} = this.props
+    const {question: {content, createdAt, like, dislike, reacted}} = this.props
 
     return (
       <Card>
         <CardHeader title="Anonymous" subtitle={format(createdAt)} />
         <CardText>{content}</CardText>
         <CardActions>
-          <FlatButton label={`${like} Like`} onClick={this._like} />
-          <FlatButton label={`${dislike} Dislike`} onClick={this._dislike} />
+          <FlatButton
+            label={`${like} Like`}
+            onClick={this._like}
+            disabled={reacted}
+          />
+          <FlatButton
+            label={`${dislike} Dislike`}
+            onClick={this._dislike}
+            disabled={reacted}
+          />
         </CardActions>
       </Card>
     )
